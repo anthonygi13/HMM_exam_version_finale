@@ -206,6 +206,19 @@ def efficiency_vs_nb_state_variante(nbFolds, S, nbSMin, nbSMax, limite, nbInit,
     plt.plot(nb_state, logV)
     plt.show()
 
+def reconnaitre_langue(mot):
+    langues = ['de l\'anglais', 'de l\'allemand', 'de l\'espagnol', 'du neerlandais', 'du suedois', 'de l\'elfique']
+    anglais = HMM.load('hmm_anglais.txt')
+    allemand = HMM.load('hmm_allemand.txt')
+    espagnol = HMM.load('hmm_espagnol.txt')
+    neerlandais = HMM.load('hmm_neerlandais.txt')
+    suedois = HMM.load('hmm_suedois.txt')
+    elfique = HMM.load('hmm_elfique.txt')
+    proba = max(anglais.logV(mot), allemand.logV(mot), espagnol.logV(mot), neerlandais.logV(mot), suedois.logV(mot),
+                 elfique.logV(mot))
+    langue = langues.index(proba)
+    return ('Le mot entré est probablement', langue)
+
 #L = text_to_list('anglais2000')
 #print('toc', xval(20, L, 26, 2, 10, 5, 5))
 
