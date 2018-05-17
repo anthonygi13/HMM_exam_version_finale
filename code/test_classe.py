@@ -1,7 +1,7 @@
 ###########################
 #  Fichier de test        #
 # 05/04/18                #
-# La communauté de l'info #
+# La communaute de l'info #
 ###########################
 
 from classe import *

@@ -239,7 +239,8 @@ def reconnaitre_langue(mot):
 #h = HMM.bw3(45, 26, text_to_list('espagnol2000'), 55, 12).save("hmm_espagnol")
 #h = HMM.bw3(45, 26, text_to_list('suedois2000'), 55, 12).save("hmm_suedois")
 #h = HMM.bw3(45, 26, text_to_list('neerlandais2000'), 55, 12).save("hmm_neerlandais")
-h = HMM.bw3(45, 26, text_to_list('neerlandais2000'), 55, 12).save("hmm_neerlandais")
+#h = HMM.bw3(45, 26, text_to_list('neerlandais2000'), 55, 12).save("hmm_neerlandais")
+h = HMM.bw3(45, 26, text_to_list('elfique'), 55, 12).save("hmm_elfique")
 
 """
 h = HMM.load("hmm_anglais")
