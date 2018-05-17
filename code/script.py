@@ -96,4 +96,20 @@ if reponse == "o":
             print("Le chemin n'est pas valide, essayez encore...")
 
 print()
+
+print("--- GENERATION DE MOTS ---")
+langues = ["allemand","anglais","elfique","espagnol","neerlandais","suedois"]
+i = int(input("Choisissez une langue : 1 = Allemand, 2 = Anglais, 3 = Elfique, 4 = Espagnol, 4 = Neerlandais, 5 = Suedois"))
+while i > (len(langues)):
+    i = int(input("erreur, réessayez :"))
+h = HMM.load("hmm_"+langues[i-1])
+print(langues[i-1])
+nb_mots = int(input("Combien de mots voulez-vous générer?"))
+for i in range(nb_mots):
+    n = random.randint(3, 8)
+    print(h.gen_mot_lettres(n))
+
+
+print("---PREDICTION LANGUE D'UN MOT---")
+
 print("Merci d'avoir utilisé notre programme !")
